@@ -37,15 +37,39 @@ class TestUser(unittest.TestCase):
         
         # Items up here...
 
+    # setup and class creation up here
+    def tearDown(self):
+            '''
+            tearDown method that does clean up after each test case has run.
+            '''
+            User.user_list = []
+
+# other test cases here
     def test_save_multiple_users(self):
-        '''
-        test_save_multiple_users to check if we can save multiple users
-        objects to our user_list
-        '''
-        self.new_users.save_users()
-        test_users = User("Test","users",23456789) # new contact
-        test_users.save_users()
-        self.assertEqual(len(User.user_list),1)
+            '''
+            test_save_multiple_users to check if we can save multiple contact
+            objects to our user_list
+            '''
+            self.new_users.save_users()
+            test_users = User("users","23456789") # new contact
+            test_users.save_users()
+            self.assertEqual(len(User.user_list),2)
+            
+            
+       # More tests above
+    def test_delete_users(self):
+            '''
+            test_delete_users to test if we can remove a contact from our contact list
+            '''
+            self.new_users.save_users()
+            test_users = User("users","23456789") # new contact
+            test_users.save_users()
+
+            self.new_users.delete_users()# Deleting a contact object
+            self.assertEqual(len(User.user_list),1) 
+            
+    
+    
 
 if __name__ == '__main__':
     unittest.main()
