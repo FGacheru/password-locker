@@ -65,11 +65,14 @@ class User:
             if users.username == username:
                     return True
 
-        return False             
+        return False  
+    
+    
+    @classmethod
+    def display_users(cls):
+        '''
+        method that returns the users list
+        '''
+        return cls.user_list           
  
-    def test_display_all_users(self):
-        '''
-        method that returns a list of all users saved
-        '''
-
-        self.assertEqual(User.display_users(),User.user_list)
+   
