@@ -40,7 +40,7 @@ class User:
     @classmethod
     def find_by_username(cls,username):
         '''
-        Method that takes in a username and returns a user that matches that username.
+        Method that takes in the username and returns a user that matches that username.
 
         Args:
             username: username to search for
