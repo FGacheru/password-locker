@@ -29,4 +29,10 @@ class User:
             password : New users password.
         '''
 
-    
+    def delete_users(self):
+
+        '''
+        delete_users method deletes a saved user from the user_list
+        '''
+
+        User.user_list.remove(self)    
