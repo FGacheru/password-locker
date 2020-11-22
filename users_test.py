@@ -2,15 +2,14 @@ import unittest
 from users import User
 
 class TestUser(unittest.TestCase):
-     '''
+    '''
     Test class that defines test cases for the contact class behaviours.
 
     Args:
         unittest.TestUser: TestUser class that helps in creating test cases
     '''
 
-      # Items up here .......
-
+    # Items up here .......
     def setUp(self):
         '''
         Set up method to run before each test cases.
@@ -24,7 +23,7 @@ class TestUser(unittest.TestCase):
         '''
 
         self.assertEqual(self.new_users.username,"Frank")
-        self.assertEqual(self.new_contact.password,"23456789")
+        self.assertEqual(self.new_users.password,"23456789")
 
 
 if __name__ == '__main__':
