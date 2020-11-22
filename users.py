@@ -66,3 +66,10 @@ class User:
                     return True
 
         return False             
+ 
+    def test_display_all_users(self):
+        '''
+        method that returns a list of all users saved
+        '''
+
+        self.assertEqual(User.display_users(),User.user_list)
