@@ -37,15 +37,15 @@ class TestUser(unittest.TestCase):
         
         # Items up here...
 
-    # def test_save_multiple_users(self):
-    #     '''
-    #     test_save_multiple_users to check if we can save multiple users
-    #     objects to our user_list
-    #     '''
-    #     self.new_users.save_users()
-    #     test_users = User("Test","users",23456789) # new contact
-    #     test_users.save_users()
-    #     self.assertEqual(len(User.user_list),1)
+    def test_save_multiple_users(self):
+        '''
+        test_save_multiple_users to check if we can save multiple users
+        objects to our user_list
+        '''
+        self.new_users.save_users()
+        test_users = User("Test","users",23456789) # new contact
+        test_users.save_users()
+        self.assertEqual(len(User.user_list),1)
 
 if __name__ == '__main__':
     unittest.main()
