@@ -88,7 +88,7 @@ class TestUser(unittest.TestCase):
         '''
 
         self.new_users.save_users()
-        test_users = User("user","frank") # new contact
+        test_users = User("frank","23456789") # new contact
         test_users.save_users()
 
         users_exists = User.users_exist("frank")
