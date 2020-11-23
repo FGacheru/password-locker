@@ -156,7 +156,7 @@ def main():
                 print('Your saved credentials are:')
                 for account in display_credentials():
                     print('*' * 100)
-                    print(f' Name: {account} \n Username: {username1} \n Password: {password}')
+                    print(f' Username: {username1} \n Password: {password}')
                     print('*' * 100)
             else:
                 print('*' * 100)
@@ -164,7 +164,7 @@ def main():
                 print('*' * 100)
         elif short_code == 'dc':
             print('Enter Account name to delete...')
-            name = input('Acount Name : ')
+            # name = input('Acount Name : ')
             print('*' * 100)
             if find_credentials(name):
                 name_result = find_credentials(name)
@@ -243,7 +243,7 @@ def main():
                 print('Invalid short code. Please try again')
             save_users(create_user(account,username, password))
         print('*' * 100)
-        print(f'Welcome {username} to your new account your password is <--- {password} --->')
+        print(f'Welcome {username} your password is <--- {password} --->')
         print('*' * 100)
     while True:
         print('Use these short codes to manage credentials: \n NC = new credential, \n VC = display credentials,\n SC =     find credential  \n Dc = delete credential, \n  EX = exit application')
