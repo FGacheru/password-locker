@@ -100,6 +100,10 @@ class TestUser(unittest.TestCase):
         method that returns a list of all users saved
         '''
 
-        self.assertEqual(User.display_users(),User.user_list)   
+        self.assertEqual(User.display_users(),User.user_list)  
+        
+        
+        
+
 if __name__ == '__main__':
     unittest.main()
